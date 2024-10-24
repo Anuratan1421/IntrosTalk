@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const crypto = require('crypto');
 const nodemailer = require('nodemailer');
-
+const bcrypt = require('bcryptjs');
 
 const app = express();
 const port = 3000;
@@ -39,7 +39,7 @@ const User = require('./models/user');
 
 
 // Backend Route to Create User and Generate Token
-const bcrypt = require('bcrypt');
+
 
 // Backend Route to Create User and Hash Password
 app.post('/register', async (req, res) => {
